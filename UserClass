@@ -1,58 +1,154 @@
-//List<User> users = new List<User>(); 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
-//OR 
+/// <summary>
+/// Summary description for Driver
+/// </summary>
+public class Driver
+{
 
-//User[] users  = new User[] {}; 
+    private int driverID;
+    private String firstName;
+    private String lastName;
+    private String username;
+    private String password;
+    private String email;
+    private String number;
+    private String driverType;
+    private String truckType;
+    private String lastUpdatedBy;
+    private DateTime lastUpdated;
+    private int companyID; 
 
+    public Driver(String firstName, String lastName, String username, String password, String email, String number, String driverType, String LastUpdatedBy, DateTime lastUpdated, int companyID)
+    {
 
-public class User {
-private User [] users; 
-private int userID;
-private String username;
-private String password;
-private String firstName;
-private String lastName;
-
-public static int nextID =0;
-
-public User(String username, String password, String firstName, String lastName) {
-
-setUsername(username);
-setPassword(password);
-setFirstName(firstName);
-setLastName(lastName);
-
-} 
-
-public void setUsername(String username) {
-
-this.username = username; 
-}
-
-public String getUsername() {
-
-return this.username; 
-
-}
-
-public void setPassword(String password) {
-this.password = password; 
-}
-
-public String getPassword() {
-return this.password; 
-}
+        setFirstName(firstName);
+        setLastName(lastName);
+        setUsername(username);
+        setPassword(password);
+        setEmail(email);
+        setNumber(number);
+        setDriverType(driverType);
+        setLastUpdatedBy(LastUpdatedBy);
+        setLastUpdated(lastUpdated);
+        setCompanyID(companyID);
 
 
+    }
 
+    public void setFirstName(String firstName)
+    {
+        this.firstName = firstName;
 
+    }
 
-public boolean checkCredentials(String username, String Password){
-        Boolean result = false; 
-     if(username.equals(this.username)  && password.equals(this.password))
-            result = true; 
-    return result; 
+    public String getFirstName()
+    {
+        return this.firstName;
+    }
+
+    public void setLastName(String lastName)
+    {
+        this.lastName = lastName; 
+    }
+
+    public String getLastName()
+    {
+        return this.lastName;
+    }
+
+    public void setUsername(String username)
+    {
+        this.username = username; 
+    }
+
+    public String getUsername()
+    {
+        return this.username;
+    }
+
+    public void setPassword(String password)
+    {
+        this.password = password;
+    }
+
+    public String getPassword()
+    {
+        return this.password; 
     }
 
 
+    public void setEmail(String email)
+    {
+        this.email = email;
+    }
 
+    public String getEmail()
+    {
+        return this.email; ; 
+    }
+   
+
+    public void setNumber(String number)
+    {
+        this.number = number; 
+    }
+        
+    public String setNumber()
+    {
+        return this.number; 
+    }
+
+
+    public void setDriverType(String driverType)
+    {
+        this.driverType = driverType;
+    }
+
+    public String getDriverType()
+    {
+        return this.driverType; 
+    }
+  
+    public void setLastUpdatedBy(String lastUpdatedBy)
+    {
+        this.lastUpdatedBy = lastUpdatedBy; 
+    }
+
+    public String getLastUpdatedBy()
+    {
+        return this.lastUpdatedBy; 
+    }
+
+    public void setLastUpdated(DateTime lastUpdated)
+    {
+        this.lastUpdated = lastUpdated; 
+    }
+
+    public DateTime getLastUpdated()
+    {
+        return this.lastUpdated; 
+    }
+
+    public void setCompanyID(int companyID)
+    {
+        this.companyID = companyID; 
+    }
+
+    public int getCompanyID()
+    {
+        return this.companyID; 
+    }
+
+    public Boolean checkCredentials(String username, String Password)
+    {
+        Boolean result = false;
+        if (username.Equals(this.username) && password.Equals(this.password))
+            result = true;
+        return result;
+    }
+
+} 
