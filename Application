@@ -1,0 +1,22 @@
+//Application Code
+
+                            boolean check = false;
+                            
+                            // Use textbox inputs. String employeeUsername = textBoxUsername;
+                            in.nextLine();
+                            
+                            // String employeePassword = textBoxPassword.Text;
+                            //Search employee array and check credentials of user input
+                            for (int i = 0; i < employeeArray.size(); i++) {
+                                if (employeeArray.get(i).checkCredentials(employeeUsername, employeePassword) == true) {
+                                    check = true;
+                                }
+
+                            }
+                            if (check == false) {
+				Label1.Visible = true; 
+                                LabelIncorrect.Text = "Inccorrect user and password";
+                                break;
+                            }
+                            if (check == true) {
+                                int choice = 0;
